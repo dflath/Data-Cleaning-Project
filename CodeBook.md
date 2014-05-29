@@ -7,27 +7,43 @@ The original data consists of 10299 cases (divided into a test set and a trainin
 
 The data set tidydtata.txt is based on a subset of 66 of the variables.  These are the 66 among the 561 original variables that contain in their names either of the strings "mean()" or "std()" indicating computed variables. This selection is a response to requirements of the Coursera project specifications, which is also the reason none of the variables in the intertial signal files are considered.
 
-The variables can be obtained from the following list:
+-- The variables can be obtained from the following list:
 
 tBodyAcc-XYZ
+
 tGravityAcc-XYZ
+
 tBodyAccJerk-XYZ
+
 tBodyGyro-XYZ
+
 tBodyGyroJerk-XYZ
+
 tBodyAccMag
+
 tGravityAccMag
+
 tBodyAccJerkMag
+
 tBodyGyroMag
+
 tBodyGyroJerkMag
+
 fBodyAcc-XYZ
+
 fBodyAccJerk-XYZ
+
 fBodyGyro-XYZ
+
 fBodyAccMag
+
 fBodyAccJerkMag
+
 fBodyGyroMag
+
 fBodyGyroJerkMag
 
-Each of the listed names above corresponds to 6 or 2 variables in tidydataset in the following manner. 
+-- Each of the listed names above corresponds to 6 or 2 variables in tidydataset in the following manner. 
 
 * For the names ending in XYZ, there are 6 variables that follow the pattern of tBodyAcc-XYZ:
 
@@ -49,15 +65,26 @@ tBodyAccMag_mean
 
 tBodyAccMag_std
 
-The product of tidydata.txt is a data set consisting of 180 rows and 69 columns. 
+-- Note that:
 
-column 1: subject.  a categorical variable with levels integer  from 1 to 30.  Indicate the subject (person) on whom measurements were taken.
+* First letter t in a variable name indicates a time domain variable 
 
-column 2: action.  a categorical variable with six levels: Lay, Sit, Stand, Walk, WalkDown, WalkUp.  Indicates the action engaged in when the measurements were taken.
+* First letter f denotes in a variable name indicates a frequency domain variable obtained with Fast Fourier Transform. 
 
-Column 3: combo: a categorical variable with 180 levels, the cross product of the subject and action variables.  For example, level 1:Stand indicate subject 1, action Stand.  There is one level for every row in tidydata.txt
+* Acc in a variablename indicates accelerometer measurements.
 
-Columns 4 through 69: 66 quantitative variables. The values in each row are the mean values of the originally chosen 66 out of 561 variables, averaged for each combo of subject and action. 
+* Gyro in the name indicates gyroscope measurements. 
+
+
+-- The product of tidydata.txt is a data set consisting of 180 rows and 69 columns. 
+
+* column 1: subject.  a categorical variable with levels integer  from 1 to 30.  Indicate the subject (person) on whom measurements were taken.
+
+* column 2: action.  a categorical variable with six levels: Lay, Sit, Stand, Walk, WalkDown, WalkUp.  Indicates the action engaged in when the measurements were taken.
+
+* Column 3: combo: a categorical variable with 180 levels, the cross product of the subject and action variables.  For example, level 1:Stand indicate subject 1, action Stand.  There is one level for every row in tidydata.txt
+
+* Columns 4 through 69: 66 quantitative variables. The values in each row are the mean values of the originally chosen 66 out of 561 variables, averaged for each combo of subject and action. 
 
 
 
